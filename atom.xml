@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Sept0913.github.io</id>
     <title>CSP_Sept</title>
-    <updated>2020-03-05T06:09:29.664Z</updated>
+    <updated>2020-03-05T06:33:53.383Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Sept0913.github.io"/>
     <link rel="self" href="https://Sept0913.github.io/atom.xml"/>
@@ -27,7 +27,9 @@
         <link href="https://Sept0913.github.io/post/about-me/">
         </link>
         <updated>2020-03-04T12:01:47.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="关于我">关于我</h1>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+<h1 id="关于我">关于我</h1>
 <ul>
 <li>初一，来自JX</li>
 <li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>…</mo></mrow><annotation encoding="application/x-tex">\ldots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.12em;vertical-align:0em;"></span><span class="minner">…</span></span></span></span></li>
@@ -44,7 +46,9 @@
         <link href="https://Sept0913.github.io/post/solution-p1075/">
         </link>
         <updated>2020-03-04T11:53:18.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="题目链接"><a href="https://www.luogu.com.cn/problem/P1075">题目链接</a></h3>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+<h3 id="题目链接"><a href="https://www.luogu.com.cn/problem/P1075">题目链接</a></h3>
 <blockquote>
 <p>谨以此文，纪念我的第一篇洛谷题解。</p>
 </blockquote>
