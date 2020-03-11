@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Sept0913.github.io</id>
-    <title>CSP_Sept</title>
-    <updated>2020-03-11T12:08:23.679Z</updated>
+    <title>Sv Blog</title>
+    <updated>2020-03-11T12:14:11.632Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Sept0913.github.io"/>
     <link rel="self" href="https://Sept0913.github.io/atom.xml"/>
     <subtitle>Everything needs hardly.</subtitle>
     <logo>https://Sept0913.github.io/images/avatar.png</logo>
     <icon>https://Sept0913.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, CSP_Sept</rights>
+    <rights>All rights reserved 2020, Sv Blog</rights>
     <entry>
         <title type="html"><![CDATA[2020 NOI Online 游记]]></title>
         <id>https://Sept0913.github.io/post/2020-noi-online-trip/</id>
