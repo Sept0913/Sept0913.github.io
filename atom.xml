@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Sept0913.github.io</id>
     <title>Sv Blog</title>
-    <updated>2020-03-12T03:39:18.719Z</updated>
+    <updated>2020-03-12T03:43:47.360Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Sept0913.github.io"/>
     <link rel="self" href="https://Sept0913.github.io/atom.xml"/>
@@ -26,7 +26,7 @@
 </ul>
 </li>
 </ul>
-</p>
+(目录)</p>
 <h2 id="怎么想">怎么想</h2>
 <p>因为要让深度<strong>最小</strong>，所以要尽量让这棵树是一棵<strong>满二叉树</strong>。</p>
 <h2 id="怎么做">怎么做</h2>
