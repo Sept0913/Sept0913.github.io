@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Sept0913.github.io</id>
     <title>Sv Blog</title>
-    <updated>2020-03-20T07:08:33.476Z</updated>
+    <updated>2020-03-21T13:03:52.873Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Sept0913.github.io"/>
     <link rel="self" href="https://Sept0913.github.io/atom.xml"/>
@@ -10,6 +10,76 @@
     <logo>https://Sept0913.github.io/images/avatar.png</logo>
     <icon>https://Sept0913.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Sv Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[提问的艺术]]></title>
+        <id>https://Sept0913.github.io/post/the-art-of-questioning/</id>
+        <link href="https://Sept0913.github.io/post/the-art-of-questioning/">
+        </link>
+        <updated>2020-03-21T12:58:36.000Z</updated>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%81%8C%E6%B0%B4%E5%8C%BA">灌水区</a>
+<ul>
+<li><a href="#%E4%B8%8D%E9%80%82%E5%90%88%E5%8F%91%E5%B8%83%E7%9A%84%E5%86%85%E5%AE%B9">不适合发布的内容</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%91%E5%B8%83%E5%9C%A8%E5%90%84%E4%B8%AA%E9%A2%98%E7%9B%AE%E7%9A%84%E5%B8%96%E5%AD%90">发布在各个题目的帖子</a>
+<ul>
+<li><a href="#%E7%BF%BB%E8%AF%91%E7%B1%BB">翻译类</a></li>
+<li><a href="#hack%E7%B1%BB">Hack类</a></li>
+<li><a href="#%E6%B1%82%E5%8A%A9%E7%B1%BB">求助类</a></li>
+<li><a href="#%E9%A2%98%E8%A7%A3%E7%B1%BB">题解类</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%8D%E9%A6%88-%E7%94%B3%E8%AF%B7-%E5%B7%A5%E5%8D%95%E4%B8%93%E7%89%88">反馈、申请、工单专版</a></li>
+<li><a href="#%E5%AD%A6%E6%9C%AF%E7%89%88">学术版</a></li>
+<li><a href="#%E7%AB%99%E5%8A%A1%E7%89%88">站务版</a></li>
+<li><a href="#%E7%8A%87%E7%8A%87">犇犇</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<p><strong>本文主要针对洛谷的一些板块的发言艺术作简述。</strong></p>
+<h2 id="灌水区">灌水区</h2>
+<h3 id="不适合发布的内容">不适合发布的内容</h3>
+<ul>
+<li>一些显而易见的东西（如「图床在哪，怎么用」）。</li>
+<li>一些休闲类，定期更新，<strong>但每次一帖</strong>，如<strong>报纸类</strong>、<strong>小说类</strong>的东西，这样只能是浪费洛谷发帖资源。</li>
+<li>实在没有意义的东西（如「各位大佬有没有玩mc的」）或让人不理解意义的。</li>
+<li>浪费管理员时间的。</li>
+</ul>
+<p>灌水区是在学习后<strong>适当</strong>放松的地方，而不是xxs的游乐园！</p>
+<h2 id="发布在各个题目的帖子">发布在各个题目的帖子</h2>
+<h3 id="翻译类">翻译类</h3>
+<pre><code>- **翻译类只能在没有翻译通道的情况下重新开帖，并且最好移步[洛谷主题库试题提供以及反馈贴](https://www.luogu.com.cn/discuss/show/183512)**。
+- 为了管理员方便，应同时放上 $\LaTeX$ 代码与这段代码的效果。
+</code></pre>
+<h3 id="hack类">Hack类</h3>
+<pre><code>- 如果数据较大，**请用云剪贴板把数据框起来**。
+- 最好可以at出题人。
+</code></pre>
+<h3 id="求助类">求助类</h3>
+<pre><code>- 可参考[我的这篇建议](https://www.luogu.com.cn/discuss/show/205655)。
+</code></pre>
+<h3 id="题解类">题解类</h3>
+<pre><code>- 请不要在讨论区发布题解，已经有人因此被禁言了！
+</code></pre>
+<h2 id="反馈-申请-工单专版">反馈、申请、工单专版</h2>
+<p>建议标题格式为 <code>【反馈、申请类型】标题</code>。</p>
+<h2 id="学术版">学术版</h2>
+<p>学术版一般用来讨论算法，<strong>请不要讨论OI无关内容</strong>，比如<a href="https://www.luogu.com.cn/discuss/show/205751">这个</a>就是个反例。</p>
+<p><strong>最好不要在别人的学术帖下发布无意义内容，别人要的是解答，而不是 <code>%%%</code>、<code>我谔谔</code> 之类的东西。</strong></p>
+<h2 id="站务版">站务版</h2>
+<p><strong>站务版是管理团队发布网站重要信息的地方，普通用户在此版块发布的帖子均会被删除。</strong></p>
+<h2 id="犇犇">犇犇</h2>
+<p>请不要发布空犇、复读、<code>I AK IOI</code> 等无意义内容，适当放松切不可放松过头！</p>
+<hr>
+<p>最后，请勿出现<strong>标题党</strong>行为，不要试图扰乱社区秩序。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[U108794-题解]]></title>
         <id>https://Sept0913.github.io/post/solution-u108794/</id>
