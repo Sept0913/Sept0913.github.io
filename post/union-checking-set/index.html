@@ -8,7 +8,7 @@
 <meta name="description" content="Everything needs hardly.">
 <meta name="theme-color" content="#000">
 <title>并查集学习笔记 | Sv Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1585103008820">
+<link rel="shortcut icon" href="/favicon.ico?v=1585103475491">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -514,7 +514,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>297<span class="pc-show">字数</span></span>
+      <span>305<span class="pc-show">字数</span></span>
     </span>
     
   </div>
@@ -523,7 +523,8 @@ window.addEventListener('load', function() {
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
 <p>从 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn mathvariant="monospace">2020.01.22</mn></mrow><annotation encoding="application/x-tex">\tt 2020.01.22</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord"><span class="mord mathtt">2</span><span class="mord mathtt">0</span><span class="mord mathtt">2</span><span class="mord mathtt">0</span><span class="mord mathtt">.</span><span class="mord mathtt">0</span><span class="mord mathtt">1</span><span class="mord mathtt">.</span><span class="mord mathtt">2</span><span class="mord mathtt">2</span></span></span></span></span> 起开始攻并查集，正是靠并查集我才混到了人生第一道<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="Blue"><mi mathvariant="normal">蓝</mi></mstyle></mrow><annotation encoding="application/x-tex">\color{Blue}蓝</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback" style="color:Blue;">蓝</span></span></span></span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">题</mi></mrow><annotation encoding="application/x-tex">题</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">题</span></span></span></span>（手动捂脸</p>
-<h1 id="例题-1p3367-模板并查集">例题 1：<a href="https://www.luogu.com.cn/problem/P3367">P3367 【模板】并查集</a></h1>
+<h1 id="例题-1p3367-模板并查集">例题 1：P3367 【模板】并查集</h1>
+<p>题目：<a href="https://www.luogu.com.cn/problem/P3367">P3367 【模板】并查集</a></p>
 <h2 id="思路">思路</h2>
 <p>模板题，考虑用一个数组 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">fa_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 记录 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 的负责人，函数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mi>i</mi><mi>n</mi><mi>d</mi><mo>(</mo><mi>i</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">find(i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mclose">)</span></span></span></span> 查询 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 的族长。</p>
 <p>于是可以写</p>
@@ -534,7 +535,7 @@ window.addEventListener('load', function() {
 </code></pre>
 <p>但这样貌似会超时。</p>
 <p>于是需要<strong>路径压缩</strong>，如下图：</p>
-<figure data-type="image" tabindex="1"><img src="https://cdn.luogu.com.cn/upload/image_hosting/c0wcjl2r.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/03/25/lSTvpJDanWoZRQe.png" alt="路径压缩.png" loading="lazy"></figure>
 <p>也就是说，在访问一个点的族长时把所有访问到的结点的负责人直接设为族长，像这样：</p>
 <pre><code class="language-cpp">int find(int x){
     if(f[x]==x) return x;
