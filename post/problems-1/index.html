@@ -7,7 +7,7 @@
 <meta name="keywords" content="Supervise">
 <meta name="description" content="Everything needs hardly.">
 <meta name="theme-color" content="#000">
-<title>KaTeX渲染实验 | Sv Blog</title>
+<title>学习强国题库 | Sv Blog</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1596771582102">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -27,7 +27,7 @@
 
 
 
-    <meta name="description" content="KaTeX渲染实验" />
+    <meta name="description" content="学习强国题库" />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -152,7 +152,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -205,6 +206,208 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#a">A</a></li>
+<li><a href="#b">B</a></li>
+<li><a href="#c">C</a></li>
+<li><a href="#d">D</a></li>
+<li><a href="#e">E</a></li>
+<li><a href="#f">F</a></li>
+<li><a href="#g">G</a></li>
+<li><a href="#h">H</a></li>
+<li><a href="#j">J</a></li>
+<li><a href="#k">K</a></li>
+<li><a href="#l">L</a></li>
+<li><a href="#m">M</a></li>
+<li><a href="#n">N</a></li>
+<li><a href="#o">O</a></li>
+<li><a href="#p">P</a></li>
+<li><a href="#q">Q</a></li>
+<li><a href="#r">R</a></li>
+<li><a href="#s">S</a></li>
+<li><a href="#t">T</a></li>
+<li><a href="#w">W</a></li>
+<li><a href="#x">X</a></li>
+<li><a href="#y">Y</a></li>
+<li><a href="#z">Z</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+      lList.push(elem);
+    }
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+
+(function() {
+  // 处理不是从#一级标题开始目录
+  if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+    let con = tocContent.children[0].children[0];
+    tocContent.innerHTML = con.innerHTML;
+  }
+  addTocNumber(tocContent, '');
+})();
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop + 10;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+            </div>
           
         
       </div>
@@ -292,8 +495,8 @@
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://Sept0913.github.io/post/katex/">
-      KaTeX渲染实验
+    <a class="post-title-link" href="https://Sept0913.github.io/post/problems-1/">
+      学习强国题库
     </a>
   </h1>
   <div class="post-meta">
@@ -301,7 +504,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-03-05</span>
+      <span>2020-08-07</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -312,14 +515,14 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>7<span class="pc-show">字数</span></span>
+      <span>46<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/katex/" data-flag-title="KaTeX渲染实验" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/problems-1/" data-flag-title="学习强国题库" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -328,9 +531,55 @@
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">x=a+b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></p>
+                <p><ul class="markdownIt-TOC">
+<li><a href="#a">A</a></li>
+<li><a href="#b">B</a></li>
+<li><a href="#c">C</a></li>
+<li><a href="#d">D</a></li>
+<li><a href="#e">E</a></li>
+<li><a href="#f">F</a></li>
+<li><a href="#g">G</a></li>
+<li><a href="#h">H</a></li>
+<li><a href="#j">J</a></li>
+<li><a href="#k">K</a></li>
+<li><a href="#l">L</a></li>
+<li><a href="#m">M</a></li>
+<li><a href="#n">N</a></li>
+<li><a href="#o">O</a></li>
+<li><a href="#p">P</a></li>
+<li><a href="#q">Q</a></li>
+<li><a href="#r">R</a></li>
+<li><a href="#s">S</a></li>
+<li><a href="#t">T</a></li>
+<li><a href="#w">W</a></li>
+<li><a href="#x">X</a></li>
+<li><a href="#y">Y</a></li>
+<li><a href="#z">Z</a></li>
+</ul>
+</p>
+<h1 id="a">A</h1>
+<h1 id="b">B</h1>
+<h1 id="c">C</h1>
+<h1 id="d">D</h1>
+<h1 id="e">E</h1>
+<h1 id="f">F</h1>
+<h1 id="g">G</h1>
+<h1 id="h">H</h1>
+<h1 id="j">J</h1>
+<h1 id="k">K</h1>
+<h1 id="l">L</h1>
+<h1 id="m">M</h1>
+<h1 id="n">N</h1>
+<h1 id="o">O</h1>
+<h1 id="p">P</h1>
+<h1 id="q">Q</h1>
+<h1 id="r">R</h1>
+<h1 id="s">S</h1>
+<h1 id="t">T</h1>
+<h1 id="w">W</h1>
+<h1 id="x">X</h1>
+<h1 id="y">Y</h1>
+<h1 id="z">Z</h1>
 
               </div>
               <div class="post-footer">
@@ -341,7 +590,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://Sept0913.github.io/post/katex/" title="KaTeX渲染实验">KaTeX渲染实验</a>
+      <a href="https://Sept0913.github.io/post/problems-1/" title="学习强国题库">学习强国题库</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -356,6 +605,10 @@
       
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="并查集学习笔记" href="https://Sept0913.github.io/post/union-checking-set/">并查集学习笔记</a>
+        <a class="nav-mobile-next" title="并查集学习笔记" href="https://Sept0913.github.io/post/union-checking-set/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
