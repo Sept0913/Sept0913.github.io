@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Sept0913.github.io</id>
     <title>Sv Blog</title>
-    <updated>2020-08-07T03:40:02.051Z</updated>
+    <updated>2020-08-07T03:41:19.419Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Sept0913.github.io"/>
     <link rel="self" href="https://Sept0913.github.io/atom.xml"/>
@@ -16,33 +16,7 @@
         <link href="https://Sept0913.github.io/post/problems-1/">
         </link>
         <updated>2020-08-07T03:37:30.000Z</updated>
-        <content type="html"><![CDATA[<p><ul class="markdownIt-TOC">
-<li><a href="#a">A</a></li>
-<li><a href="#b">B</a></li>
-<li><a href="#c">C</a></li>
-<li><a href="#d">D</a></li>
-<li><a href="#e">E</a></li>
-<li><a href="#f">F</a></li>
-<li><a href="#g">G</a></li>
-<li><a href="#h">H</a></li>
-<li><a href="#j">J</a></li>
-<li><a href="#k">K</a></li>
-<li><a href="#l">L</a></li>
-<li><a href="#m">M</a></li>
-<li><a href="#n">N</a></li>
-<li><a href="#o">O</a></li>
-<li><a href="#p">P</a></li>
-<li><a href="#q">Q</a></li>
-<li><a href="#r">R</a></li>
-<li><a href="#s">S</a></li>
-<li><a href="#t">T</a></li>
-<li><a href="#w">W</a></li>
-<li><a href="#x">X</a></li>
-<li><a href="#y">Y</a></li>
-<li><a href="#z">Z</a></li>
-</ul>
-</p>
-<h1 id="a">A</h1>
+        <content type="html"><![CDATA[<h1 id="a">A</h1>
 <h1 id="b">B</h1>
 <h1 id="c">C</h1>
 <h1 id="d">D</h1>
