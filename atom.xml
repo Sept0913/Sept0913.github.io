@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Sept0913.github.io</id>
+    <id>https://sept.xmoe.xyz</id>
     <title>Sv Blog</title>
-    <updated>2020-08-15T02:50:10.107Z</updated>
+    <updated>2020-11-29T03:02:18.607Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Sept0913.github.io"/>
-    <link rel="self" href="https://Sept0913.github.io/atom.xml"/>
+    <link rel="alternate" href="https://sept.xmoe.xyz"/>
+    <link rel="self" href="https://sept.xmoe.xyz/atom.xml"/>
     <subtitle>Everything needs hardly.</subtitle>
-    <logo>https://Sept0913.github.io/images/avatar.png</logo>
-    <icon>https://Sept0913.github.io/favicon.ico</icon>
+    <logo>https://sept.xmoe.xyz/images/avatar.png</logo>
+    <icon>https://sept.xmoe.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, Sv Blog</rights>
     <entry>
         <title type="html"><![CDATA[Educational Codeforces Round 93 游记]]></title>
-        <id>https://Sept0913.github.io/post/edu-round-93-trip/</id>
-        <link href="https://Sept0913.github.io/post/edu-round-93-trip/">
+        <id>https://sept.xmoe.xyz/post/edu-round-93-trip/</id>
+        <link href="https://sept.xmoe.xyz/post/edu-round-93-trip/">
         </link>
         <updated>2020-08-15T02:41:42.000Z</updated>
         <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
@@ -37,8 +37,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[学习强国题库]]></title>
-        <id>https://Sept0913.github.io/post/problems-1/</id>
-        <link href="https://Sept0913.github.io/post/problems-1/">
+        <id>https://sept.xmoe.xyz/post/problems-1/</id>
+        <link href="https://sept.xmoe.xyz/post/problems-1/">
         </link>
         <updated>2020-08-07T03:37:30.000Z</updated>
         <content type="html"><![CDATA[<h1 id="a">A</h1>
@@ -68,8 +68,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[并查集学习笔记]]></title>
-        <id>https://Sept0913.github.io/post/union-checking-set/</id>
-        <link href="https://Sept0913.github.io/post/union-checking-set/">
+        <id>https://sept.xmoe.xyz/post/union-checking-set/</id>
+        <link href="https://sept.xmoe.xyz/post/union-checking-set/">
         </link>
         <updated>2020-03-24T13:35:28.000Z</updated>
         <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
@@ -127,8 +127,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[提问的艺术]]></title>
-        <id>https://Sept0913.github.io/post/the-art-of-questioning/</id>
-        <link href="https://Sept0913.github.io/post/the-art-of-questioning/">
+        <id>https://sept.xmoe.xyz/post/the-art-of-questioning/</id>
+        <link href="https://sept.xmoe.xyz/post/the-art-of-questioning/">
         </link>
         <updated>2020-03-21T12:58:36.000Z</updated>
         <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
@@ -197,8 +197,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[JOISC2020游记]]></title>
-        <id>https://Sept0913.github.io/post/joisc-2020-trip/</id>
-        <link href="https://Sept0913.github.io/post/joisc-2020-trip/">
+        <id>https://sept.xmoe.xyz/post/joisc-2020-trip/</id>
+        <link href="https://sept.xmoe.xyz/post/joisc-2020-trip/">
         </link>
         <updated>2020-03-20T07:08:41.000Z</updated>
         <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
@@ -217,8 +217,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[U108794-题解]]></title>
-        <id>https://Sept0913.github.io/post/solution-u108794/</id>
-        <link href="https://Sept0913.github.io/post/solution-u108794/">
+        <id>https://sept.xmoe.xyz/post/solution-u108794/</id>
+        <link href="https://sept.xmoe.xyz/post/solution-u108794/">
         </link>
         <updated>2020-03-12T03:05:02.000Z</updated>
         <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
@@ -247,8 +247,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[2020 NOI Online 游记]]></title>
-        <id>https://Sept0913.github.io/post/2020-noi-online-trip/</id>
-        <link href="https://Sept0913.github.io/post/2020-noi-online-trip/">
+        <id>https://sept.xmoe.xyz/post/2020-noi-online-trip/</id>
+        <link href="https://sept.xmoe.xyz/post/2020-noi-online-trip/">
         </link>
         <updated>2020-03-05T10:49:39.000Z</updated>
         <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
@@ -293,8 +293,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[About me]]></title>
-        <id>https://Sept0913.github.io/post/about-me/</id>
-        <link href="https://Sept0913.github.io/post/about-me/">
+        <id>https://sept.xmoe.xyz/post/about-me/</id>
+        <link href="https://sept.xmoe.xyz/post/about-me/">
         </link>
         <updated>2020-03-04T12:01:47.000Z</updated>
         <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
@@ -315,8 +315,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[P1075 质因数分解-题解]]></title>
-        <id>https://Sept0913.github.io/post/solution-p1075/</id>
-        <link href="https://Sept0913.github.io/post/solution-p1075/">
+        <id>https://sept.xmoe.xyz/post/solution-p1075/</id>
+        <link href="https://sept.xmoe.xyz/post/solution-p1075/">
         </link>
         <updated>2020-03-04T11:53:18.000Z</updated>
         <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
