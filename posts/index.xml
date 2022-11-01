@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Sept Flowers</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on Sept Flowers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 01 Nov 2022 13:15:48 +0800</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSP S2022</title>
+      <link>http://example.org/posts/csp-s2022/</link>
+      <pubDate>Tue, 01 Nov 2022 13:15:48 +0800</pubDate>
+      
+      <guid>http://example.org/posts/csp-s2022/</guid>
+      <description>Day -1（10.27） 运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。
+于是坐大巴。
+车上，吃运动会时剩下的运动员福利：吮指原味鸡。
+Day 0（10.28） 0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。
+2:00，睡觉。
+起来先去做了个核酸。中午进行了贵族餐品的吃。
+晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！
+Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。
+中午吃盒饭，然而发现我没有带帆布袋。
+大家很激动，想要面基，结果就帮一个老哥带了瓶水。
+激动，14:20 到考场，然后开始看题！
+先看 T1 阿，感觉很奇怪。于是开始试着写。
+令 dp[i][j] 表示路线上第 i 个地点是 j 的最优答案，然后 O(kn^2) 预处理一下就可以开始转移。
+测了下样例，发现读错题了，不能重复，浅维护了一下序列，虽然感觉很不对，但是一发过了小、中样例，就不管了。于是小的暴力，大的暴力 dp。
+这时已经 16:00 了，而我刚刚拍完 T1，拍了 2w+ 组，感觉挺舒服的。于是开始 T2。
+看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。
+再看了一下发现要分正负维护，好寄吧牛逼啊我草。
+于是我觉得我很牛逼地想出了一个只维护 B 的做法，感觉是 O(qn\log m) 的，很正确。于是马上开始写，大概 40 min 完成了工作，对拍无误。
+突然发现数据范围是 10^5，不敢乱写了！老老实实地写了个维护 A 的。
+本来要分讨拿出下面 5 个数的：
+最大（小）正（负）数 和 0（特判） 后面一想，懒得分讨，最优答案必定出在它们之间，全部扔了出来。</description>
+    </item>
+    
+  </channel>
+</rss>
