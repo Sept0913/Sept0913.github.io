@@ -1,15 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>CSP-S2022 | Sept Flowers</title>
+<meta name="keywords" content="">
+<meta name="description" content="Day -1（10.27） 运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。
+于是坐大巴。
+车上，吃运动会时剩下的运动员福利：吮指原味鸡。
+Day 0（10.28） 0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。
+2:00，睡觉。
+起来先去做了个核酸。中午进行了贵族餐品的吃。
+晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！
+Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。">
+<meta name="author" content="">
+<link rel="canonical" href="https://Sept0913.github.io/posts/csp-s2022/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3299c596a7007118365635c056dd427dace22b7b8c1341fdef6fa6c31359ba10.css" integrity="sha256-MpnFlqcAcRg2VjXAVt1CfaziK3uME0H972&#43;mwxNZuhA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://Sept0913.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://Sept0913.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://Sept0913.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://Sept0913.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://Sept0913.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="CSP-S2022" />
+<meta property="og:description" content="Day -1（10.27） 运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。
+于是坐大巴。
+车上，吃运动会时剩下的运动员福利：吮指原味鸡。
+Day 0（10.28） 0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。
+2:00，睡觉。
+起来先去做了个核酸。中午进行了贵族餐品的吃。
+晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！
+Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Sept0913.github.io/posts/csp-s2022/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-01T13:15:48+08:00" />
+<meta property="article:modified_time" content="2022-11-01T13:15:48+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSP-S2022"/>
+<meta name="twitter:description" content="Day -1（10.27） 运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。
+于是坐大巴。
+车上，吃运动会时剩下的运动员福利：吮指原味鸡。
+Day 0（10.28） 0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。
+2:00，睡觉。
+起来先去做了个核酸。中午进行了贵族餐品的吃。
+晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！
+Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://Sept0913.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "CSP-S2022",
+      "item": "https://Sept0913.github.io/posts/csp-s2022/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CSP-S2022",
+  "name": "CSP-S2022",
+  "description": "Day -1（10.27） 运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。\n于是坐大巴。\n车上，吃运动会时剩下的运动员福利：吮指原味鸡。\nDay 0（10.28） 0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。\n2:00，睡觉。\n起来先去做了个核酸。中午进行了贵族餐品的吃。\n晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！\nDay 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。",
+  "keywords": [
+    
+  ],
+  "articleBody": "Day -1（10.27） 运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。\n于是坐大巴。\n车上，吃运动会时剩下的运动员福利：吮指原味鸡。\nDay 0（10.28） 0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。\n2:00，睡觉。\n起来先去做了个核酸。中午进行了贵族餐品的吃。\n晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！\nDay 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。\n中午吃盒饭，然而发现我没有带帆布袋。\n大家很激动，想要面基，结果就帮一个老哥带了瓶水。\n激动，14:20 到考场，然后开始看题！\n先看 T1 阿，感觉很奇怪。于是开始试着写。\n令 dp[i][j] 表示路线上第 i 个地点是 j 的最优答案，然后 O(kn^2) 预处理一下就可以开始转移。\n测了下样例，发现读错题了，不能重复，浅维护了一下序列，虽然感觉很不对，但是一发过了小、中样例，就不管了。于是小的暴力，大的暴力 dp。\n这时已经 16:00 了，而我刚刚拍完 T1，拍了 2w+ 组，感觉挺舒服的。于是开始 T2。\n看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。\n再看了一下发现要分正负维护，好牛逼啊我草。\n于是我觉得我很牛逼地想出了一个只维护 B 的做法，感觉是 O(qn\\log m) 的，很正确。于是马上开始写，大概 40 min 完成了工作，对拍无误。\n突然发现数据范围是 10^5，不敢乱写了！老老实实地写了个维护 A 的。\n本来要分讨拿出下面 5 个数的：\n最大（小）正（负）数 和 0（特判） 后面一想，懒得分讨，最优答案必定出在它们之间，全部扔了出来。\n时间复杂度 $O(wq\\log n\\log m)$，其中 w 约等于 4.5。\n写完，17:30，拍了 1.6w+ 组，感觉很正确，不管了。\n还剩一个小时阿，看完 T3T4 用了半个小时，剩下感觉只能莽 T4 暴力了。\n然而我写的是 dfs 而不是 bfs，令人感叹。最后摆了，懒得写了。\n回来车上吃了肯德基，测了一下：\nLuogu：100+100+0+0=200 InfOJ：85+100+0+0=185 睡觉。\nDay 2（10.30） 已经开始返校了。\n【更新】 计蒜客：100+100+0+0=200\nDay 3（10.31） InfOJ \u0026 LHQ 测试：100+85+0+0=185，全省 rk19。\n",
+  "wordCount" : "106",
+  "inLanguage": "en",
+  "datePublished": "2022-11-01T13:15:48+08:00",
+  "dateModified": "2022-11-01T13:15:48+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://Sept0913.github.io/posts/csp-s2022/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sept Flowers",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://Sept0913.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://Sept0913.github.io/" accesskey="h" title="Sept Flowers (Alt + H)">Sept Flowers</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      CSP-S2022
+    </h1>
+    <div class="post-meta"><span title='2022-11-01 13:15:48 +0800 CST'>November 1, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="day--11027">Day -1（10.27）<a hidden class="anchor" aria-hidden="true" href="#day--11027">#</a></h2>
+<p>运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。</p>
+<p>于是坐大巴。</p>
+<p>车上，吃运动会时剩下的运动员福利：吮指原味鸡。</p>
+<h2 id="day-01028">Day 0（10.28）<a hidden class="anchor" aria-hidden="true" href="#day-01028">#</a></h2>
+<p>0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。</p>
+<p>2:00，睡觉。</p>
+<p>起来先去做了个核酸。中午进行了贵族餐品的吃。</p>
+<p>晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！</p>
+<h2 id="day-11029">Day 1（10.29）<a hidden class="anchor" aria-hidden="true" href="#day-11029">#</a></h2>
+<p>起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。</p>
+<p>中午吃盒饭，然而发现我没有带帆布袋。</p>
+<p>大家很激动，想要面基，结果就帮一个老哥带了瓶水。</p>
+<hr>
+<p>激动，14:20 到考场，然后开始看题！</p>
+<p>先看 T1 阿，感觉很奇怪。于是开始试着写。</p>
+<p>令 dp[i][j] 表示路线上第 i 个地点是 j 的最优答案，然后 O(kn^2) 预处理一下就可以开始转移。</p>
+<p>测了下样例，发现读错题了，不能重复，浅维护了一下序列，虽然感觉很不对，但是一发过了小、中样例，就不管了。于是小的暴力，大的暴力 dp。</p>
+<p>这时已经 16:00 了，而我刚刚拍完 T1，拍了 2w+ 组，感觉挺舒服的。于是开始 T2。</p>
+<p>看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。</p>
+<p>再看了一下发现要分正负维护，好牛逼啊我草。</p>
+<p>于是我觉得我很牛逼地想出了一个只维护 B 的做法，感觉是 O(qn\log m) 的，很正确。于是马上开始写，大概 40 min 完成了工作，对拍无误。</p>
+<p>突然发现数据范围是 10^5，不敢乱写了！老老实实地写了个维护 A 的。</p>
+<p>本来要分讨拿出下面 5 个数的：</p>
+<ul>
+<li>最大（小）正（负）数 和 0（特判）</li>
+</ul>
+<p>后面一想，懒得分讨，最优答案必定出在它们之间，全部扔了出来。</p>
+<p>时间复杂度 $O(wq\log n\log m)$，其中 w 约等于 4.5。</p>
+<p>写完，17:30，拍了 1.6w+ 组，感觉很正确，不管了。</p>
+<p>还剩一个小时阿，看完 T3T4 用了半个小时，剩下感觉只能莽 T4 暴力了。</p>
+<p>然而我写的是 dfs 而不是 bfs，令人感叹。最后摆了，懒得写了。</p>
+<hr>
+<p>回来车上吃了肯德基，测了一下：</p>
+<ul>
+<li>Luogu：100+100+0+0=200</li>
+<li>InfOJ：85+100+0+0=185</li>
+</ul>
+<p>睡觉。</p>
+<h2 id="day-21030">Day 2（10.30）<a hidden class="anchor" aria-hidden="true" href="#day-21030">#</a></h2>
+<p>已经开始返校了。</p>
+<p><strong>【更新】</strong> 计蒜客：100+100+0+0=200</p>
+<h2 id="day-31031">Day 3（10.31）<a hidden class="anchor" aria-hidden="true" href="#day-31031">#</a></h2>
+<p>InfOJ &amp; LHQ 测试：100+85+0+0=185，全省 rk19。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://Sept0913.github.io/">Sept Flowers</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      renderMathInElement(document.body, {
-              delimiters: [
-                  {left: "$$", right: "$$", display: true},
-                  {left: "$", right: "$", display: false}
-              ]
-          });
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
     });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
