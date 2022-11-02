@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/posts/csp-s2022/</loc>
+    <loc>https://Sept0913.github.io/posts/20221102/</loc>
+    <lastmod>2022-11-02T12:50:20+08:00</lastmod>
+  </url><url>
+    <loc>https://Sept0913.github.io/posts/</loc>
+    <lastmod>2022-11-02T12:50:20+08:00</lastmod>
+  </url><url>
+    <loc>https://Sept0913.github.io/</loc>
+    <lastmod>2022-11-02T12:50:20+08:00</lastmod>
+  </url><url>
+    <loc>https://Sept0913.github.io/posts/csp-s2022/</loc>
     <lastmod>2022-11-01T13:15:48+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/</loc>
-    <lastmod>2022-11-01T13:15:48+08:00</lastmod>
+    <loc>https://Sept0913.github.io/categories/</loc>
   </url><url>
-    <loc>http://example.org/</loc>
-    <lastmod>2022-11-01T13:15:48+08:00</lastmod>
-  </url><url>
-    <loc>http://example.org/categories/</loc>
-  </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://Sept0913.github.io/tags/</loc>
   </url>
 </urlset>

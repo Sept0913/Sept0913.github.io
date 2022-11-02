@@ -22,22 +22,17 @@ Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单
 令 dp[i][j] 表示路线上第 i 个地点是 j 的最优答案，然后 O(kn^2) 预处理一下就可以开始转移。
 测了下样例，发现读错题了，不能重复，浅维护了一下序列，虽然感觉很不对，但是一发过了小、中样例，就不管了。于是小的暴力，大的暴力 dp。
 这时已经 16:00 了，而我刚刚拍完 T1，拍了 2w&#43; 组，感觉挺舒服的。于是开始 T2。
-看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。
-再看了一下发现要分正负维护，好牛逼啊我草。
-于是我觉得我很牛逼地想出了一个只维护 B 的做法，感觉是 O(qn\log m) 的，很正确。于是马上开始写，大概 40 min 完成了工作，对拍无误。
-突然发现数据范围是 10^5，不敢乱写了！老老实实地写了个维护 A 的。
-本来要分讨拿出下面 5 个数的：
-最大（小）正（负）数 和 0（特判） 后面一想，懒得分讨，最优答案必定出在它们之间，全部扔了出来。">
+看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。">
 <meta name="author" content="">
-<link rel="canonical" href="http://example.org/posts/csp-s2022/">
+<link rel="canonical" href="https://Sept0913.github.io/posts/csp-s2022/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3299c596a7007118365635c056dd427dace22b7b8c1341fdef6fa6c31359ba10.css" integrity="sha256-MpnFlqcAcRg2VjXAVt1CfaziK3uME0H972&#43;mwxNZuhA=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://example.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
-<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<link rel="icon" href="https://Sept0913.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://Sept0913.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://Sept0913.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://Sept0913.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://Sept0913.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -92,14 +87,9 @@ Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单
 令 dp[i][j] 表示路线上第 i 个地点是 j 的最优答案，然后 O(kn^2) 预处理一下就可以开始转移。
 测了下样例，发现读错题了，不能重复，浅维护了一下序列，虽然感觉很不对，但是一发过了小、中样例，就不管了。于是小的暴力，大的暴力 dp。
 这时已经 16:00 了，而我刚刚拍完 T1，拍了 2w&#43; 组，感觉挺舒服的。于是开始 T2。
-看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。
-再看了一下发现要分正负维护，好牛逼啊我草。
-于是我觉得我很牛逼地想出了一个只维护 B 的做法，感觉是 O(qn\log m) 的，很正确。于是马上开始写，大概 40 min 完成了工作，对拍无误。
-突然发现数据范围是 10^5，不敢乱写了！老老实实地写了个维护 A 的。
-本来要分讨拿出下面 5 个数的：
-最大（小）正（负）数 和 0（特判） 后面一想，懒得分讨，最优答案必定出在它们之间，全部扔了出来。" />
+看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/posts/csp-s2022/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://Sept0913.github.io/posts/csp-s2022/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-01T13:15:48+08:00" />
 <meta property="article:modified_time" content="2022-11-01T13:15:48+08:00" />
 
@@ -120,12 +110,7 @@ Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单
 令 dp[i][j] 表示路线上第 i 个地点是 j 的最优答案，然后 O(kn^2) 预处理一下就可以开始转移。
 测了下样例，发现读错题了，不能重复，浅维护了一下序列，虽然感觉很不对，但是一发过了小、中样例，就不管了。于是小的暴力，大的暴力 dp。
 这时已经 16:00 了，而我刚刚拍完 T1，拍了 2w&#43; 组，感觉挺舒服的。于是开始 T2。
-看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。
-再看了一下发现要分正负维护，好牛逼啊我草。
-于是我觉得我很牛逼地想出了一个只维护 B 的做法，感觉是 O(qn\log m) 的，很正确。于是马上开始写，大概 40 min 完成了工作，对拍无误。
-突然发现数据范围是 10^5，不敢乱写了！老老实实地写了个维护 A 的。
-本来要分讨拿出下面 5 个数的：
-最大（小）正（负）数 和 0（特判） 后面一想，懒得分讨，最优答案必定出在它们之间，全部扔了出来。"/>
+看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。"/>
 
 
 <script type="application/ld+json">
@@ -137,13 +122,13 @@ Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "http://example.org/posts/"
+      "item": "https://Sept0913.github.io/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "CSP-S2022",
-      "item": "http://example.org/posts/csp-s2022/"
+      "item": "https://Sept0913.github.io/posts/csp-s2022/"
     }
   ]
 }
@@ -154,7 +139,7 @@ Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单
   "@type": "BlogPosting",
   "headline": "CSP-S2022",
   "name": "CSP-S2022",
-  "description": "Day -1（10.27） 运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。\n于是坐大巴。\n车上，吃运动会时剩下的运动员福利：吮指原味鸡。\nDay 0（10.28） 0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。\n2:00，睡觉。\n起来先去做了个核酸。中午进行了贵族餐品的吃。\n晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！\nDay 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。\n中午吃盒饭，然而发现我没有带帆布袋。\n大家很激动，想要面基，结果就帮一个老哥带了瓶水。\n激动，14:20 到考场，然后开始看题！\n先看 T1 阿，感觉很奇怪。于是开始试着写。\n令 dp[i][j] 表示路线上第 i 个地点是 j 的最优答案，然后 O(kn^2) 预处理一下就可以开始转移。\n测了下样例，发现读错题了，不能重复，浅维护了一下序列，虽然感觉很不对，但是一发过了小、中样例，就不管了。于是小的暴力，大的暴力 dp。\n这时已经 16:00 了，而我刚刚拍完 T1，拍了 2w+ 组，感觉挺舒服的。于是开始 T2。\n看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。\n再看了一下发现要分正负维护，好牛逼啊我草。\n于是我觉得我很牛逼地想出了一个只维护 B 的做法，感觉是 O(qn\\log m) 的，很正确。于是马上开始写，大概 40 min 完成了工作，对拍无误。\n突然发现数据范围是 10^5，不敢乱写了！老老实实地写了个维护 A 的。\n本来要分讨拿出下面 5 个数的：\n最大（小）正（负）数 和 0（特判） 后面一想，懒得分讨，最优答案必定出在它们之间，全部扔了出来。",
+  "description": "Day -1（10.27） 运动会，本来打算第二天出发，结果当晚晚读刚结束就走了。\n于是坐大巴。\n车上，吃运动会时剩下的运动员福利：吮指原味鸡。\nDay 0（10.28） 0:47，抵达酒店。然后同学开始打 CSGO 我开始激情 AI 作图。\n2:00，睡觉。\n起来先去做了个核酸。中午进行了贵族餐品的吃。\n晚上吃火锅。前后打了几把狼人杀，感觉很猛阿！\nDay 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单源最短路，很困，全程在水群。\n中午吃盒饭，然而发现我没有带帆布袋。\n大家很激动，想要面基，结果就帮一个老哥带了瓶水。\n激动，14:20 到考场，然后开始看题！\n先看 T1 阿，感觉很奇怪。于是开始试着写。\n令 dp[i][j] 表示路线上第 i 个地点是 j 的最优答案，然后 O(kn^2) 预处理一下就可以开始转移。\n测了下样例，发现读错题了，不能重复，浅维护了一下序列，虽然感觉很不对，但是一发过了小、中样例，就不管了。于是小的暴力，大的暴力 dp。\n这时已经 16:00 了，而我刚刚拍完 T1，拍了 2w+ 组，感觉挺舒服的。于是开始 T2。\n看完题我感觉很牛逼，因为我一眼 ST 表/线段树，然而我都懒得写。",
   "keywords": [
     
   ],
@@ -165,14 +150,14 @@ Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单
   "dateModified": "2022-11-01T13:15:48+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://example.org/posts/csp-s2022/"
+    "@id": "https://Sept0913.github.io/posts/csp-s2022/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Sept Flowers",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://example.org/favicon.ico"
+      "url": "https://Sept0913.github.io/favicon.ico"
     }
   }
 }
@@ -194,7 +179,7 @@ Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://example.org/" accesskey="h" title="Sept Flowers (Alt + H)">Sept Flowers</a>
+            <a href="https://Sept0913.github.io/" accesskey="h" title="Sept Flowers (Alt + H)">Sept Flowers</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -290,7 +275,7 @@ Day 1（10.29） 起来以后讲解了一下 CSP-S2021 T4、平衡树 以及 单
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="http://example.org/">Sept Flowers</a></span>
+    <span>&copy; 2022 <a href="https://Sept0913.github.io/">Sept Flowers</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
